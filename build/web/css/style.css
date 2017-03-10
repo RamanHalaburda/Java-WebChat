@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana","Arial","Helvetica",sans-serif;
+}
+
+html, body {
+    height: 100%; /* высота HTML и BODY */
+    margin: 0; /* убираем поля по краям страницы */
+    padding: 0;
+	min-height: 100%;
+}
+
+body {
+    background-image: url(background/a3.jpg);
+    background-size: cover; /* масштабируемость фона */
+    padding: 0;
+    margin: 0;
+}
+
+.page-wrapper {
+    /* тип отображения - flex, влияет на то, как будут вести себя дочерние блоки (http://html5.by/blog/flexbox/) */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 100%; /* минимальная высота обертки */
+    padding: 0 10px; /* оставляет по 10px справа и слева, если сжать окно браузера */
+    margin:0 auto;
+    background-image: url(background/r2.jpg);
+}
+
+/* на широких экранах контент становится шире */
+@media (min-width: 1240px) 
+{
+    .page-wrapper 
+    {
+            width: 1000px;
+    }
+}
+
+.clock {
+    position: fixed;	
+    text-align: right; 
+    line-height: 0;
+    top: 10px; 
+    left: 10px; 
+    background: #BEBECE;
+    opacity: 0.95;
+    border-radius: 2px;
+    padding: 2px 5px; 
+}
+
+#inputdate, #inputtime {
+    text-align: center;
+    padding: 1px;
+}
+
+#text_message {
+    width: 90%;
+    height: 70%
+}
+
+#txt_msg {
+    width: 80%;
+    height: 30px;
+}
+
+#cmd_msg {
+    width: 10%;
+    height: 30px;
+}
+
+.refresh {
+    border: 1px solid #BEBECE;
+    border-radius: 8px;
+    background-image: url(background/a3.jpg);
+    padding: 5px;
+}
